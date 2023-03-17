@@ -1,0 +1,475 @@
+* {
+    font-family: 'Nanum Gothic Coding', monospace;  /* 폰트 적용 */
+    list-style: none;  /* 리스트 태그 삭제 */
+}
+
+ul {
+    padding-left: 0px;  /* ul padding-left 삭제 */
+}
+
+a {
+    text-decoration: none;  /* 하이퍼링크 밑줄 삭제 */
+}
+
+#not-provided {
+    display: none;   /* id가 not-provided인 부분을 안보이게 하기 */
+                     /* 화면에 존재는 하지만 보이지 않게 하는 역할 */
+                     /* visibility: hidden → 빈 공간은 남게 함 */
+}
+
+@media (max-width: 575px){  /* 특정 크기(576px) 이상부터 보일건 보이게하고 안보일건 안보이게 하기 */
+    header,
+    main,
+    article,
+    footer{
+        display: none !important;  /* !important → 다른 거 적용 여부 상관없이 최우선으로 적용 */
+    }
+    #not-provided{
+        display: block;
+    }
+}
+
+/* header */
+
+header > nav > .icon-container,
+#contact .contact-container {
+    margin-left: 12rem;
+}
+
+header > nav > .navbar-nav {
+    margin-right: 12rem;
+}
+
+header > nav {
+    background-color: white;
+}
+
+header .icon-container span {
+    font-size: 3rem;
+}
+
+header ul{
+    font-size: 1.5rem;
+}
+
+@media (max-width: 992px){
+    header > nav > .icon-container {
+        margin-left: 6rem;
+    }
+
+    header > nav > .navbar-nav {
+        margin-right: 6rem;
+    }
+}
+
+
+#my-intro,
+#frontpage {
+    padding-top: 5rem;
+}
+
+#frontpage > .title-container > h2,
+.info-text-container .top-text,
+.info-text-container .icon-container,
+#skills .card-header {
+    color: rgb(47, 0, 255);
+}
+
+#frontpage > .title-container .button,
+#skills,
+#contact .icon-container {
+    background-color: rgb(92, 205, 240); 
+}
+
+#frontpage > .title-container > h3,
+.info-text-container h3,
+#my-intro > div > section.info-text-container > div > h2 {
+    color: rgb(0, 162, 255); 
+}
+
+#frontpage > .title-container > ul {
+    color: rgba(0, 102, 255, 0.4);  /* rgb 수치 입력 후 4번째 인자로 투명도 조절 */
+}
+
+#frontpage {
+    background-color: rgb(233, 229, 229);
+    display: flex;
+    height: 100vh;
+}
+
+#frontpage > .title-container {
+    flex: 1;
+}
+
+.frontpage-img-container {
+    flex: 3;
+    background-image: linear-gradient(to left, transparent, gainsboro), url('./img/labtop.jpg');
+    background-size: cover;
+}
+
+#frontpage > nav {
+    width: 100px;
+}
+
+#frontpage > nav > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+}
+
+#frontpage > nav li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#frontpage > nav .github-icon {
+    height: 2.8rem;
+}
+
+#frontpage > .title-container {
+    padding-left: 10rem;
+    padding-top: 10rem;
+}
+
+#frontpage > .title-container > h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#frontpage > .title-container > ul {
+    margin-bottom: 30px;
+}
+
+#frontpage > .title-container button {
+    margin-right: 20px;
+    border-color: blue;
+    border-radius: 20px;
+    color: white;
+}
+
+@media (max-width:992px) {
+    #frontpage > nav li {
+        display: none;
+    }
+
+    #frontpage > .title-container {
+        padding-left: 1rem;
+        padding-top: 8rem;
+    }
+
+    #frontpage h2 {
+        font-size: 1.8rem;
+    }
+
+    #frontpage h3 {
+        font-size: 1.5rem;
+    }
+    
+    #frontpage ul {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width:1200px) {
+    .frontpage-img-container {
+        display: none;
+    }
+}
+
+/* my-intro */
+
+#my-intro {
+    display: flex;
+    align-items: center;
+}
+
+#my-intro > .my-intro-layout-parent {
+    display: flex;
+    margin-bottom: 120px;
+}
+
+#my-intro .profile-img-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-intro .info-text-container {
+    flex: 2;
+    padding-left: 60px;
+}
+
+#my-intro .profile-img {
+    height: 50rem;
+    width: 30rem;
+    background-image: url(./img/profile.jpg);
+    background-size: cover;
+}
+
+#my-intro .info-text-container .top-text {
+    margin-bottom: 40px;
+}
+
+#my-intro .info-text-container > .contact-info-ul {
+    height: 200px;
+    display: flex;
+    font-display: column;
+}
+
+@media (max-width:992px) {
+    #my-intro .info-text-container .contact-info-ul {
+        margin-top: 80px;
+    }
+}
+
+#my-intro .info-text-container h3 {
+    margin-bottom: 20px;
+}
+
+#my-intro .info-text-container p {
+    margin-bottom: 30px;
+}
+
+#my-intro .my-intro-layout-parent > h2 {
+    margin-bottom: 20px;
+
+}
+
+#my-intro .my-intro-layout-parent > ul {
+    display: flex;
+
+}
+
+#my-intro .my-intro-layout-parent li {
+    margin-right: 4rem;
+    width: 2rem;
+    justify-content: space-between;
+    display: flex;
+
+}
+
+#my-intro .contact-info-ul .row{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#my-intro .contact-info-ul .icon-container {
+    flex: 1;
+}
+
+#my-intro .contact-info-ul .icon-container {
+    flex: 4;
+}
+
+#my-intro .contact-info-ul .icon-container {
+    flex: 5;
+}
+
+@media (max-width:992px) {
+    #my-intro .my-intro-layout-parent {
+        flex-direction: column;
+    }
+}
+
+/* skills */
+
+#skills > ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#skills > h2 {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#skills .card {
+    width: 20rem;
+    margin-bottom: 100px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#skills .card-header {
+    font-size: 1.5rem;
+}
+
+#skills ul img {
+    height: 4rem;
+    margin-top: 10px;
+}
+
+/* project */
+
+#project h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#project > .edu-project-container {
+    display: flex;
+}
+
+#project .edu-container {
+    flex: 2;
+}
+
+#project .project-container {
+    flex: 1;
+}
+
+@media (max-width:992px) {
+    #project > .edu-project-container {
+        flex-direction: column;
+    }
+}
+
+#project > .edu-project-container h3 {
+    display: flex;
+    align-items: center;
+}
+
+#project > .edu-project-container h3 .material-symbols-outlined {
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+#project .date {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#project .date-data {
+    margin-left: 20px;
+}
+
+#project li {
+    border-left: 5px solid #2714d6;
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+/* contact */
+
+#contact {
+    margin-bottom: 80px;
+}
+
+#contact h2,h3 {
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+}
+
+#contact h3 {
+    font-size: 3rem;
+    margin-bottom: 80px;
+}
+
+#contact .contact-container {
+    display: flex;
+}
+
+#contact .input-container {
+    flex: 2;
+}
+
+#contact .name-email-container,
+#contact .title-container,
+#contact .content-container {
+    margin-bottom: 40px;
+}
+
+#contact .name-email-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-container, .email-container {
+    flex: 1;
+}
+
+#contact .contact-info-container {
+    flex: 1;
+}
+
+#contact-input-content {
+    height: 300px;
+}
+
+#contact .input-container .button {
+    margin-right: 20px;
+    border-radius: 20px;
+    height: 50px;
+    width: 100%;
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width:1000px) {
+    .contact-info-container {
+        display: none;
+    }
+}
+
+.phone-container {
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+#contact .icon-container {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+}
+
+#contact .icon-container span {
+    font-size: 2rem;
+    color: white;
+}
+
+.category {
+    margin-left: 30px;
+}
+
+
+
+/* footer */
+
+footer {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.5rem;
+}
+
+@media (max-width:768px) {
+    footer {
+        font-size: 1rem;
+    }
+}
